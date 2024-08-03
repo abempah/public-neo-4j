@@ -1,0 +1,10 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_RETURN_data.csv' AS row
+CREATE (:RETURN {
+id: row.`0`,
+ARGUMENT_INDEX: row.`2`,
+ARGUMENT_NAME: row.`3`,
+CODE: row.`4`,
+COLUMN_NUMBER: row.`5`,
+LINE_NUMBER: row.`6`,
+ORDER: row.`7`
+});

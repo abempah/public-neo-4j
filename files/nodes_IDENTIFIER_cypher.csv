@@ -1,0 +1,14 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_IDENTIFIER_data.csv' AS row
+CREATE (:IDENTIFIER {
+id: row.`0`,
+ARGUMENT_INDEX: row.`2`,
+ARGUMENT_NAME: row.`3`,
+CODE: row.`4`,
+COLUMN_NUMBER: row.`5`,
+DYNAMIC_TYPE_HINT_FULL_NAME: toStringList(split(row.`6`, ";")),
+LINE_NUMBER: row.`7`,
+NAME: row.`8`,
+ORDER: row.`9`,
+POSSIBLE_TYPES: toStringList(split(row.`10`, ";")),
+TYPE_FULL_NAME: row.`11`
+});

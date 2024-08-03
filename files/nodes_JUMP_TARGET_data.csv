@@ -1,0 +1,35 @@
+:ID,:LABEL,ARGUMENT_INDEX:int,CODE:string,COLUMN_NUMBER:int,LINE_NUMBER:int,NAME:string,ORDER:int,PARSER_TYPE_NAME:string
+81604378624,JUMP_TARGET,-1,case m:,10,405,case,1,SwitchCase
+81604378625,JUMP_TARGET,-1,case g:,10,407,case,4,SwitchCase
+81604378626,JUMP_TARGET,-1,case y:,10,409,case,7,SwitchCase
+81604378627,JUMP_TARGET,-1,case Q:,10,412,case,11,SwitchCase
+81604378628,JUMP_TARGET,-1,"case ""t"":",20,493,case,1,SwitchCase
+81604378629,JUMP_TARGET,-1,"case ""f"":",20,495,case,4,SwitchCase
+81604378630,JUMP_TARGET,-1,"case ""n"":",20,497,case,7,SwitchCase
+81604378631,JUMP_TARGET,-1,"case ""{"":",10,450,case,1,SwitchCase
+81604378632,JUMP_TARGET,-1,"case ""["":",10,472,case,4,SwitchCase
+81604378633,JUMP_TARGET,-1,"case '""':",10,484,case,7,SwitchCase
+81604378634,JUMP_TARGET,-1,"case ""-"":",10,486,case,10,SwitchCase
+81604378635,JUMP_TARGET,-1,default:,10,488,default,13,SwitchCase
+81604378636,JUMP_TARGET,-1,case qc():,10,3249,case,1,SwitchCase
+81604378637,JUMP_TARGET,-1,case Wr() === T:,10,3252,case,5,SwitchCase
+81604378638,JUMP_TARGET,-1,case $c():,10,3255,case,9,SwitchCase
+81604378639,JUMP_TARGET,-1,default:,10,3258,default,13,SwitchCase
+81604378640,JUMP_TARGET,-1,case 8:,16,3837,case,1,SwitchCase
+81604378641,JUMP_TARGET,-1,case 9:,16,3838,case,3,SwitchCase
+81604378642,JUMP_TARGET,-1,case 13:,16,3839,case,5,SwitchCase
+81604378643,JUMP_TARGET,-1,case 16:,16,3840,case,7,SwitchCase
+81604378644,JUMP_TARGET,-1,case 17:,16,3841,case,9,SwitchCase
+81604378645,JUMP_TARGET,-1,case 18:,16,3842,case,11,SwitchCase
+81604378646,JUMP_TARGET,-1,case 27:,16,3843,case,13,SwitchCase
+81604378647,JUMP_TARGET,-1,case 32:,16,3844,case,15,SwitchCase
+81604378648,JUMP_TARGET,-1,case 37:,16,3845,case,17,SwitchCase
+81604378649,JUMP_TARGET,-1,case 38:,16,3846,case,19,SwitchCase
+81604378650,JUMP_TARGET,-1,case 39:,16,3847,case,21,SwitchCase
+81604378651,JUMP_TARGET,-1,case 40:,16,3848,case,23,SwitchCase
+81604378652,JUMP_TARGET,-1,case 91:,16,3849,case,25,SwitchCase
+81604378653,JUMP_TARGET,-1,default:,16,3851,default,28,SwitchCase
+81604378654,JUMP_TARGET,-1,case uf:,12,5233,case,1,SwitchCase
+81604378655,JUMP_TARGET,-1,case lf:,12,5256,case,5,SwitchCase
+81604378656,JUMP_TARGET,-1,case ff:,12,5259,case,9,SwitchCase
+81604378657,JUMP_TARGET,-1,case sf:,12,5265,case,13,SwitchCase

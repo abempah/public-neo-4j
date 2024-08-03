@@ -1,0 +1,13 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_LOCAL_data.csv' AS row
+CREATE (:LOCAL {
+id: row.`0`,
+CLOSURE_BINDING_ID: row.`2`,
+CODE: row.`3`,
+COLUMN_NUMBER: row.`4`,
+DYNAMIC_TYPE_HINT_FULL_NAME: toStringList(split(row.`5`, ";")),
+LINE_NUMBER: row.`6`,
+NAME: row.`7`,
+ORDER: row.`8`,
+POSSIBLE_TYPES: toStringList(split(row.`9`, ";")),
+TYPE_FULL_NAME: row.`10`
+});

@@ -1,0 +1,20 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_METHOD_data.csv' AS row
+CREATE (:METHOD {
+id: row.`0`,
+AST_PARENT_FULL_NAME: row.`2`,
+AST_PARENT_TYPE: row.`3`,
+CODE: row.`4`,
+COLUMN_NUMBER: row.`5`,
+COLUMN_NUMBER_END: row.`6`,
+FILENAME: row.`7`,
+FULL_NAME: row.`8`,
+HASH: row.`9`,
+IS_EXTERNAL: row.`10`,
+LINE_NUMBER: row.`11`,
+LINE_NUMBER_END: row.`12`,
+NAME: row.`13`,
+OFFSET: row.`14`,
+OFFSET_END: row.`15`,
+ORDER: row.`16`,
+SIGNATURE: row.`17`
+});

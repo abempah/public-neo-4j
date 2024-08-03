@@ -1,0 +1,7 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_CLOSURE_BINDING_data.csv' AS row
+CREATE (:CLOSURE_BINDING {
+id: row.`0`,
+CLOSURE_BINDING_ID: row.`2`,
+CLOSURE_ORIGINAL_NAME: row.`3`,
+EVALUATION_STRATEGY: row.`4`
+});

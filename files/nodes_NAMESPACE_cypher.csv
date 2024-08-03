@@ -1,0 +1,9 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_NAMESPACE_data.csv' AS row
+CREATE (:NAMESPACE {
+id: row.`0`,
+CODE: row.`2`,
+COLUMN_NUMBER: row.`3`,
+LINE_NUMBER: row.`4`,
+NAME: row.`5`,
+ORDER: row.`6`
+});

@@ -1,0 +1,13 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_METHOD_PARAMETER_OUT_data.csv' AS row
+CREATE (:METHOD_PARAMETER_OUT {
+id: row.`0`,
+CODE: row.`2`,
+COLUMN_NUMBER: row.`3`,
+EVALUATION_STRATEGY: row.`4`,
+INDEX: row.`5`,
+IS_VARIADIC: row.`6`,
+LINE_NUMBER: row.`7`,
+NAME: row.`8`,
+ORDER: row.`9`,
+TYPE_FULL_NAME: row.`10`
+});

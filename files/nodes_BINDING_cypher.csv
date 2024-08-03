@@ -1,0 +1,7 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/files/nodes_BINDING_data.csv' AS row
+CREATE (:BINDING {
+id: row.`0`,
+METHOD_FULL_NAME: row.`2`,
+NAME: row.`3`,
+SIGNATURE: row.`4`
+});

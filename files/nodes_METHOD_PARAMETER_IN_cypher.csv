@@ -1,0 +1,16 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_METHOD_PARAMETER_IN_data.csv' AS row
+CREATE (:METHOD_PARAMETER_IN {
+id: row.`0`,
+CLOSURE_BINDING_ID: row.`2`,
+CODE: row.`3`,
+COLUMN_NUMBER: row.`4`,
+DYNAMIC_TYPE_HINT_FULL_NAME: toStringList(split(row.`5`, ";")),
+EVALUATION_STRATEGY: row.`6`,
+INDEX: row.`7`,
+IS_VARIADIC: row.`8`,
+LINE_NUMBER: row.`9`,
+NAME: row.`10`,
+ORDER: row.`11`,
+POSSIBLE_TYPES: toStringList(split(row.`12`, ";")),
+TYPE_FULL_NAME: row.`13`
+});

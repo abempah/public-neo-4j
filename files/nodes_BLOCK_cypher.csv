@@ -1,0 +1,13 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_BLOCK_data.csv' AS row
+CREATE (:BLOCK {
+id: row.`0`,
+ARGUMENT_INDEX: row.`2`,
+ARGUMENT_NAME: row.`3`,
+CODE: row.`4`,
+COLUMN_NUMBER: row.`5`,
+DYNAMIC_TYPE_HINT_FULL_NAME: split(row.`6`, ";"),
+LINE_NUMBER: row.`7`,
+ORDER: row.`8`,
+POSSIBLE_TYPES: split(row.`9`, ";"),
+TYPE_FULL_NAME: row.`10`
+});

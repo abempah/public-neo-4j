@@ -1,0 +1,7 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_TYPE_data.csv' AS row
+CREATE (:TYPE {
+id: row.`0`,
+FULL_NAME: row.`2`,
+NAME: row.`3`,
+TYPE_DECL_FULL_NAME: row.`4`
+});

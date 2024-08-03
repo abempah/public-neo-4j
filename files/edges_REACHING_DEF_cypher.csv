@@ -1,0 +1,4 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/edges_REACHING_DEF_data.csv' AS row
+MATCH (a), (b)
+WHERE a.id = row.`0` AND b.id = row.`1`
+CREATE (a)-[r:REACHING_DEF {VARIABLE: row.`3`}]->(b);

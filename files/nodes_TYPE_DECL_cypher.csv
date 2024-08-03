@@ -1,0 +1,18 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_TYPE_DECL_data.csv' AS row
+CREATE (:TYPE_DECL {
+id: row.`0`,
+ALIAS_TYPE_FULL_NAME: row.`2`,
+AST_PARENT_FULL_NAME: row.`3`,
+AST_PARENT_TYPE: row.`4`,
+CODE: row.`5`,
+COLUMN_NUMBER: row.`6`,
+FILENAME: row.`7`,
+FULL_NAME: row.`8`,
+INHERITS_FROM_TYPE_FULL_NAME: toStringList(split(row.`9`, ";")),
+IS_EXTERNAL: row.`10`,
+LINE_NUMBER: row.`11`,
+NAME: row.`12`,
+OFFSET: row.`13`,
+OFFSET_END: row.`14`,
+ORDER: row.`15`
+});

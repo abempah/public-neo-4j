@@ -1,0 +1,14 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_METHOD_REF_data.csv' AS row
+CREATE (:METHOD_REF {
+id: row.`0`,
+ARGUMENT_INDEX: row.`2`,
+ARGUMENT_NAME: row.`3`,
+CODE: row.`4`,
+COLUMN_NUMBER: row.`5`,
+DYNAMIC_TYPE_HINT_FULL_NAME: split(row.`6`, ";"),
+LINE_NUMBER: row.`7`,
+METHOD_FULL_NAME: row.`8`,
+ORDER: row.`9`,
+POSSIBLE_TYPES: split(row.`10`, ";"),
+TYPE_FULL_NAME: row.`11`
+});

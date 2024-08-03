@@ -1,0 +1,9 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/getarbit/neo4j-csvs/main/nodes_META_DATA_data.csv' AS row
+CREATE (:META_DATA {
+id: row.`0`,
+HASH: row.`2`,
+LANGUAGE: row.`3`,
+OVERLAYS: toStringList(split(row.`4`, ";")),
+ROOT: row.`5`,
+VERSION: row.`6`
+});
